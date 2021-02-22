@@ -55,5 +55,6 @@ gradle
 
 # Approval tests
 stdout_log.txt
+ApprovalTest.testRunningGame.received.txt
 
 
