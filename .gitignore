@@ -54,7 +54,7 @@ gradle
 .idea
 
 # Approval tests
-stdout_log.txt
-ApprovalTest.testRunningGame.received.txt
+stdout_*.txt
+ApprovalTest.*.received.txt
 
 

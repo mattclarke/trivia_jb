@@ -1,6 +1,7 @@
 package com.adaptionsoft.games.trivia;
 
 import com.adaptionsoft.games.trivia.runner.GameRunner;
+import com.adaptionsoft.games.uglytrivia.Game;
 import org.approvaltests.Approvals;
 import org.junit.jupiter.api.Test;
 
@@ -12,10 +13,24 @@ import java.util.Scanner;
 public class ApprovalTest {
     @Test
     public void testRunningGame() throws FileNotFoundException {
-        File outputFile = new File("stdout_log.txt");
+        File outputFile = new File("stdout_game.txt");
         System.setOut(new PrintStream(outputFile));
 
         GameRunner.main(null);
+
+        String result = readStdOutputLog(outputFile);
+
+        Approvals.verify(result);
+    }
+
+    @Test
+    public void testAddingTwoPlayers() throws FileNotFoundException {
+        File outputFile = new File("stdout_add_players.txt");
+        System.setOut(new PrintStream(outputFile));
+
+        Game game = new Game();
+        game.add("Matt");
+        game.add("Bron");
 
         String result = readStdOutputLog(outputFile);
 
