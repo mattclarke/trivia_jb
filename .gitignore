@@ -53,3 +53,7 @@ gradle
 # Idea
 .idea
 
+# Approval tests
+stdout_log.txt
+
+
