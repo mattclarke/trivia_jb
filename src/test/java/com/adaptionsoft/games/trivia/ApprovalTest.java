@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class ApprovalTest {
     @Test
     public void runningFullGame() throws FileNotFoundException {
-        File outputFile = new File("stdout_game.txt");
+        File outputFile = new File("stdout_capture.txt");
         System.setOut(new PrintStream(outputFile));
 
         GameRunner.main(null);
@@ -25,7 +25,7 @@ public class ApprovalTest {
 
     @Test
     public void addingTwoPlayers() throws FileNotFoundException {
-        File outputFile = new File("stdout_add_players.txt");
+        File outputFile = new File("stdout_capture.txt");
         System.setOut(new PrintStream(outputFile));
 
         Game game = new Game();
@@ -39,7 +39,7 @@ public class ApprovalTest {
 
     @Test
     public void onWrongAnswer() throws FileNotFoundException {
-        File outputFile = new File("stdout_on_wrong_answer.txt");
+        File outputFile = new File("stdout_capture.txt");
         System.setOut(new PrintStream(outputFile));
 
         Game game = new Game();
@@ -53,7 +53,7 @@ public class ApprovalTest {
 
     @Test
     public void wasCorrectlyAnswered() throws FileNotFoundException {
-        File outputFile = new File("stdout_on_correct_answer.txt");
+        File outputFile = new File("stdout_capture.txt");
         System.setOut(new PrintStream(outputFile));
 
         Game game = new Game();
@@ -67,7 +67,7 @@ public class ApprovalTest {
 
     @Test
     public void onlyPlayerRollsAOne() throws FileNotFoundException {
-        File outputFile = new File("stdout_on_correct_answer.txt");
+        File outputFile = new File("stdout_capture.txt");
         System.setOut(new PrintStream(outputFile));
 
         Game game = new Game();
@@ -81,7 +81,7 @@ public class ApprovalTest {
 
     @Test
     public void onlyPlayerRollsATwo() throws FileNotFoundException {
-        File outputFile = new File("stdout_on_correct_answer.txt");
+        File outputFile = new File("stdout_capture.txt");
         System.setOut(new PrintStream(outputFile));
 
         Game game = new Game();
