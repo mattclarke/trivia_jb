@@ -37,6 +37,20 @@ public class ApprovalTest {
         Approvals.verify(result);
     }
 
+    @Test
+    public void onWrongAnswer() throws FileNotFoundException {
+        File outputFile = new File("stdout_on_wrong_answer.txt");
+        System.setOut(new PrintStream(outputFile));
+
+        Game game = new Game();
+        game.add("Matt");
+        game.wrongAnswer();
+
+        String result = readStdOutputLog(outputFile);
+
+        Approvals.verify(result);
+    }
+
     private String readStdOutputLog(File outputFile) throws FileNotFoundException {
         StringBuilder resultStringBuilder = new StringBuilder();
         Scanner myReader = new Scanner(outputFile);
