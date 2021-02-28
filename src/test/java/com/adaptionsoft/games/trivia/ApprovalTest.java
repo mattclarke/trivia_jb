@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class ApprovalTest {
     @Test
-    public void testRunningGame() throws FileNotFoundException {
+    public void runningFullGame() throws FileNotFoundException {
         File outputFile = new File("stdout_game.txt");
         System.setOut(new PrintStream(outputFile));
 
@@ -24,7 +24,7 @@ public class ApprovalTest {
     }
 
     @Test
-    public void testAddingTwoPlayers() throws FileNotFoundException {
+    public void addingTwoPlayers() throws FileNotFoundException {
         File outputFile = new File("stdout_add_players.txt");
         System.setOut(new PrintStream(outputFile));
 
